@@ -1,8 +1,4 @@
-<div class="phone-images">
-  <img ng-src="{{img}}" class="phone"
-      ng-class="{selected: img === $ctrl.mainImageUrl}"
-      ng-repeat="img in $ctrl.phone.images" />
-</div>
+<img ng-src="{{$ctrl.phone.images[0]}}" class="phone" />
 
 <h1>{{$ctrl.phone.name}}</h1>
 
@@ -10,7 +6,7 @@
 
 <ul class="phone-thumbs">
   <li ng-repeat="img in $ctrl.phone.images">
-    <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" />
+    <img ng-src="{{img}}" />
   </li>
 </ul>
 
@@ -52,9 +48,9 @@
       <dt>Bluetooth</dt>
       <dd>{{$ctrl.phone.connectivity.bluetooth}}</dd>
       <dt>Infrared</dt>
-      <dd>{{$ctrl.phone.connectivity.infrared | checkmark}}</dd>
+      <dd>{{$ctrl.phone.connectivity.infrared}}</dd>
       <dt>GPS</dt>
-      <dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>
+      <dd>{{$ctrl.phone.connectivity.gps}}</dd>
     </dl>
   </li>
   <li>
@@ -83,7 +79,7 @@
       <dt>Screen resolution</dt>
       <dd>{{$ctrl.phone.display.screenResolution}}</dd>
       <dt>Touch screen</dt>
-      <dd>{{$ctrl.phone.display.touchScreen | checkmark}}</dd>
+      <dd>{{$ctrl.phone.display.touchScreen}}</dd>
     </dl>
   </li>
   <li>
@@ -96,9 +92,9 @@
       <dt>Audio / headphone jack</dt>
       <dd>{{$ctrl.phone.hardware.audioJack}}</dd>
       <dt>FM Radio</dt>
-      <dd>{{$ctrl.phone.hardware.fmRadio | checkmark}}</dd>
+      <dd>{{$ctrl.phone.hardware.fmRadio}}</dd>
       <dt>Accelerometer</dt>
-      <dd>{{$ctrl.phone.hardware.accelerometer | checkmark}}</dd>
+      <dd>{{$ctrl.phone.hardware.accelerometer}}</dd>
     </dl>
   </li>
   <li>
